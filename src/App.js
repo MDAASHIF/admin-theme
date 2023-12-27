@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route, Link, useLocation, useNavigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route,Outlet, Link, useLocation, useNavigate } from 'react-router-dom';
 import { Grid, TextField, Button } from "@mui/material";
 import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
@@ -41,7 +41,7 @@ function MainLayout() {
         <div style={{ marginLeft: isSidebarOpen ? 240 : 0, padding: 16, marginTop: 5, flex: 1 }}>
           <Routes>
             <Route index element={<Dashboard />} />
-            <Route path="home" element={<Home />} />
+            <Route path="/home" element={<Home />} />
           </Routes>
         </div>
       </div>

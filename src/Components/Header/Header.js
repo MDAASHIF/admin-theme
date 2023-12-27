@@ -3,9 +3,10 @@ import React from 'react';
 import { AppBar, Toolbar, Typography, IconButton, Box, Menu, Tooltip, MenuItem } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import Avatar from '@mui/material/Avatar';
+import { Link } from 'react-router-dom';
 
 const Header = ({ onToggleSidebar }) => {
-  const settings = ['Profile', 'Change Password', , 'Logout'];
+  const settings = ['Profile', 'Change Password' , 'Logout'];
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
   const handleOpenUserMenu = (event) => {
@@ -50,7 +51,8 @@ const Header = ({ onToggleSidebar }) => {
           onClose={handleCloseUserMenu}
         >
           {settings.map((setting, index) => (
-            <MenuItem key={index} onClick={handleCloseUserMenu}>
+            <MenuItem key={index} onClick={handleCloseUserMenu} component={Link}
+            to="/">
               {setting}
             </MenuItem>
           ))}
