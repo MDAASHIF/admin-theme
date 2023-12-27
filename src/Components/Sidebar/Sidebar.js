@@ -37,9 +37,9 @@ const Sidebar = ({ isOpen, onClose }) => {
       <List>
         <ListItem
           component={Link}
-          to="/dashboard"
+          to="/admin/dashboard"
           sx={{
-            backgroundColor: isLinkActive('/dashboard') ? '#A9A9A9' : 'transparent',
+            backgroundColor: isLinkActive('/admin/dashboard') ? '#A9A9A9' : 'transparent',
             color: 'white',
             '&:hover': {
               backgroundColor: 'LightBlue',
@@ -53,9 +53,9 @@ const Sidebar = ({ isOpen, onClose }) => {
         </ListItem>
         <ListItem
           component={Link}
-          to="/dashboard/home"
+          to="/admin/user-list"
           sx={{
-            backgroundColor: isLinkActive('/dashboard/home') ? '#A9A9A9' : 'transparent',
+            backgroundColor: isLinkActive('/admin/user-list') ? '#A9A9A9' : 'transparent',
             color: 'white',
             '&:hover': {
               backgroundColor: 'LightBlue',

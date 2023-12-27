@@ -9,7 +9,7 @@ function Login() {
 
     const handleLogin = () => {
         localStorage.setItem('isLoggedIn', 'true');
-        navigate('/dashboard');
+        navigate('/admin');
       };
   return (
     <div >

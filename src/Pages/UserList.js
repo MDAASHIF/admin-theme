@@ -8,7 +8,7 @@ import PersonAddAltIcon from '@mui/icons-material/PersonAddAlt';
 import { Breadcrumbs, Typography, Button } from '@mui/material';
 import { Link } from 'react-router-dom';
 
-const Home = () => {
+const UserList = () => {
   const columns = [
     { field: 'id', headerName: 'ID', flex: 1 },
     { field: 'firstName', headerName: 'First Name', flex: 2 },
@@ -58,7 +58,8 @@ const Home = () => {
           <IconButton>
             <SearchIcon />
           </IconButton>
-          <Button variant="contained" color="primary" style={{ marginRight: 10, marginLeft: 10 }}>
+          <Button  component={Link}
+          to="/admin/user-add" variant="contained" color="primary" style={{ marginRight: 10, marginLeft: 10 }}>
             <PersonAddAltIcon />
           </Button>
         </Box>
@@ -101,4 +102,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default UserList;

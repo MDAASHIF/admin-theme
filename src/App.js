@@ -5,14 +5,15 @@ import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
 import Sidebar from "./Components/Sidebar/Sidebar";
 import Dashboard from './Pages/Dashboard';
-import Home from "./Pages/Home";
+import UserList from "./Pages/UserList";
+import UserAdd from "./Pages/UserAdd";
 import Login from "./Auth/Login";
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/dashboard/*" element={<MainLayout />} />
+        <Route path="/admin/*" element={<MainLayout />} />
         <Route path="/" element={<Login />} />
       </Routes>
     </Router>
@@ -41,7 +42,9 @@ function MainLayout() {
         <div style={{ marginLeft: isSidebarOpen ? 240 : 0, padding: 16, marginTop: 5, flex: 1 }}>
           <Routes>
             <Route index element={<Dashboard />} />
-            <Route path="/home" element={<Home />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/user-list" element={<UserList />} />
+            <Route path="/user-add" element={<UserAdd />} />
           </Routes>
         </div>
       </div>
